@@ -26,9 +26,9 @@
                         @foreach ($posts as $post)
                         <tr>
                             <th scope="row">{{$post->id}}</th>
-                            <td><img src="{{asset('storage/'.$post->image)}}" width="80"></td>
-                            <td>Lorem ipsum dolor sit </td>
-                            <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam nemo ut sint earum dicta laborum in magnam cum, modi nam ipsum doloremque harum neque dignissimos impedit doloribus aspernatur, sapiente fugiat!</td>
+                            <td><img src="{{asset($post->image)}}" width="80"></td>
+                            <td>{{$post->title}}</td>
+                            <td>{{$post->description}}</td>
                             <td>카테고리</td>
                             <td>발행일</td>
                             <td>

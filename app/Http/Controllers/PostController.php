@@ -56,7 +56,7 @@ class PostController extends Controller
         $post->title = $request->title;
         $post->description = $request->description;
         $post->category_id = $request->category_id;
-        $post->image = $filePath;
+        $post->image = 'storage/'.$filePath;
 
         $post->save();
 
