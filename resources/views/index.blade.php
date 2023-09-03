@@ -23,9 +23,10 @@
                         </tr>
                     </thead>
                     <tbody>
+                        @foreach ($posts as $post)
                         <tr>
-                            <th scope="row">1</th>
-                            <td><img src="http://picsum.photos/200" width="80"></td>
+                            <th scope="row">{{$post->id}}</th>
+                            <td><img src="{{asset('storage/'.$post->image)}}" width="80"></td>
                             <td>Lorem ipsum dolor sit </td>
                             <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam nemo ut sint earum dicta laborum in magnam cum, modi nam ipsum doloremque harum neque dignissimos impedit doloribus aspernatur, sapiente fugiat!</td>
                             <td>카테고리</td>
@@ -35,6 +36,8 @@
                                 <a class="btn btn-sm btn-danger" href="">Delete</a>
                             </td>
                         </tr>
+                        @endforeach
+
                     </tbody>
                 </table>
             </div>
