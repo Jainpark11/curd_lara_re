@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Post;
 use App\Models\Category;
 use Illuminate\Http\Request;
 
@@ -43,7 +44,15 @@ class PostController extends Controller
             'category_id'=>['required','integer'],
             'description'=>['required'],
         ]);
-        dd('success');
+
+
+        $fileName = time().'_'.$request->image->getClientOriginalName();
+        $filePath = $request->image->storeAs('public/uploads', $fileName);
+
+        $post = new Post();
+
+        $post->title = $request->title;
+        return $filePath;
     }
 
     /**
