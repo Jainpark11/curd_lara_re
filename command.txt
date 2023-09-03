@@ -1,1 +1,2 @@
-php artisan make:controller PostController
+리소스 컨트롤러
+php artisan make:controller PostController -r
