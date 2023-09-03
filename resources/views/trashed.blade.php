@@ -4,9 +4,9 @@
     <div class="main-content mt-5">
         <div class="card">
             <div class="card-header">
-                All Posts
-                <a class="btn btn-sm btn-success" href="{{route('posts.create')}}">create</a>
-                <a class="btn btn-sm btn-dark" href="">trashed</a>
+                <h1>trashed posts</h1>
+                <a class="btn btn-sm btn-success" href="">back</a>
+
             </div>
 
             <div class="card-body">

@@ -1,2 +1,6 @@
 리소스 컨트롤러
 php artisan make:controller PostController -r
+
+모델을 생성할 때 데이터베이스 마이그레이션을 생성하고 싶다면 --migration 혹은 -m 옵션을 사용할 수 있습니다.
+php artisan make:model Post -m
+php artisan make:model Category -m
